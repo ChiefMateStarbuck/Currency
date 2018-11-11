@@ -109,3 +109,5 @@ def exchange(load, begin, end, amount):
 2. (Optional) Add your own values to the 'exchange.txt' file
 3. Run the engine like so: `python3 engine.py [Beginning Currency] [End Currency] [amount]`
 
+That's it! You're ready to go.
+
