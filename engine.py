@@ -3,7 +3,7 @@ import sys
 if len(sys.argv) > 1:
     begin = sys.argv[1]
     end = sys.argv[2]
-    amount = sys.argv[3]
+    amount = float(sys.argv[3])
 else:
     begin = 'ISK'
     end = 'JPY'
@@ -51,7 +51,7 @@ for line in file:
    
     if line_list[0] not in load:
         # The first element in the map is a list which will hold the conversion rates 
-        # of the current path. ( I will be implementing a Breadth First Search to o find the path)
+        # of the current path. (I will be implementing a Breadth First Search to find the path)
         load[line_list[0]] = [[]]
     
     """

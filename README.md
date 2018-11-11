@@ -8,12 +8,10 @@ I felt pretty bummed about the entire situation so I decided to write out a comp
 Given a .txt list of conversion rates stylized like so:
 
 ```
-
 USD,JPY,1.1
 USD,IMP,.8
 IMP,RUB,8.2
 JMD,USD,.6
-
 
 EXAMPLE:
 
@@ -50,7 +48,7 @@ for line in file:
 
     if line_list[0] not in load:
         # The first element in the map is a list which will hold the conversion rates 
-        # of the current path. ( I will be implementing a Breadth First Search to o find the path)
+        # of the current path. (I will be implementing a Breadth First Search to  find the path)
         load[line_list[0]] = [[]]
 
     """
@@ -108,6 +106,6 @@ def exchange(load, begin, end, amount):
 1. Download the GitHub and cd into the folder
 2. (Optional) Add your own values to the 'exchange.txt' file
 3. Run the engine like so: `python3 engine.py [Beginning Currency] [End Currency] [amount]`
+    Example: `python3 engine.py USD RUB 93.21`
 
 That's it! You're ready to go.
-
