@@ -1,6 +1,6 @@
 # Currency Converter
 
-I currently received a rejection letter of my number one choice company after an over the phone interview.
+I currently received a rejection letter from my number one choice company after an over the phone interview.
 I felt pretty bummed about the entire situation so I decided to write out a complete solution for the technical question I was asked.
 
 ## The problem
