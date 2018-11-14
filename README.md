@@ -75,27 +75,26 @@ def exchange(load, begin, end, amount):
     while fringe:
         top = fringe.pop(0)
 
-        if top[0] != end:
-            visited.append(top[0])
-            temp_children = load[top[0]][1:]
+        visited.append(top[0])
+        temp_children = load[top[0]][1:]
 
-            for child in temp_children:
+        for child in temp_children:
 
-                if child[0] == end:
-                    conversion = []
-                    conversion.extend(load[top[0]][0])
-                    conversion.append(top[1])
-                    conversion.append(child[1])
+            if child[0] == end:
+                conversion = []
+                conversion.extend(load[top[0]][0])
+                conversion.append(top[1])
+                conversion.append(child[1])
 
-                    for con in conversion:
-                        amount *= con
-                    return con
+                for con in conversion:
+                    amount *= con
+                return con
 
-                if child[0] not in visited and child[0] in load: 
-                    fringe.append(child)
-                    load[child[0]][0].extend(load[top[0]][0])
-                    load[child[0]][0].append(top[1])
-                    load[child[0]][1] = top[0]
+            if child[0] not in visited and child[0] in load: 
+                fringe.append(child)
+                load[child[0]][0].extend(load[top[0]][0])
+                load[child[0]][0].append(top[1])
+                load[child[0]][1] = top[0]
 
     return -1
 
